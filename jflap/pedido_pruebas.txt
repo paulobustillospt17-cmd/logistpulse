@@ -1,0 +1,9 @@
+# Entradas para Input > Multiple Run en JFLAP (una por línea) y resultado esperado
+crpedg	Accept	Ciclo completo: Borrador→…→Entregado
+x	Accept	Pedido descartado en borrador (cierre válido)
+crx	Accept	Cancelado tras reservar: libera la reserva
+d	Reject	Borrador→Despachado: δ(Borrador,d) no definida
+cpedg	Reject	Picking sin reserva: δ(Confirmado,p) no definida
+crpedgx	Reject	Cancelar un pedido entregado: δ(Entregado,x) no definida
+cxr	Reject	Reactivar un cancelado: δ(Cancelado,r) no definida
+crped	Reject	Termina en Despachado (no final): pedido aún no entregado

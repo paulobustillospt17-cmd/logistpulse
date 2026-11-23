@@ -1,0 +1,5 @@
+graph P { node [shape=box, style="rounded,filled", fillcolor="#EEF3FB", color="#5B7DB1", fontname="Helvetica"]; edge [fontname="Helvetica", fontsize=13, color="#9AA6B8", penwidth=1.5];
+R [pos="0,1!", label="R\nRecepción", fillcolor="#FFF4E0"]; A [pos="1.8,2.2!", label="A\nPasillo A"]; B [pos="1.8,-0.2!", label="B\nPasillo B"];
+P [pos="3.6,1!", label="P\nPicking", fillcolor="#E4F4E8"]; E [pos="5.4,1!", label="E\nEmpaque"]; D [pos="7.2,1!", label="D\nDespacho", fillcolor="#FFF4E0"]; C [pos="3.6,-1.4!", label="C\nPasillo C"];
+R--A [label="4"]; R--B [label="2", color="#2E5BD8", penwidth=3.5]; A--B [label="1", color="#2E5BD8", penwidth=3.5]; A--P [label="3"]; A--E [label="5", color="#2E5BD8", penwidth=3.5];
+B--P [label="7"]; B--C [label="3"]; P--E [label="2"]; P--C [label="2"]; C--E [label="4"]; E--D [label="3", color="#2E5BD8", penwidth=3.5]; }

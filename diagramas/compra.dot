@@ -1,0 +1,20 @@
+digraph G {
+rankdir=TB; nodesep=0.35; ranksep=0.35; bgcolor="white"; node [fontname="Helvetica", fontsize=20, style=filled, fillcolor="#EEF3FB", color="#5B7DB1"]; edge [fontname="Helvetica-Bold", fontsize=22, color="#4A5A78"];
+__i [shape=point, width=0.12, label=""];
+"Borrador" [shape=ellipse, fillcolor="#EEF3FB"];
+"EnAprobacion" [shape=ellipse, fillcolor="#EEF3FB"];
+"Aprobada" [shape=ellipse, fillcolor="#EEF3FB"];
+"Enviada" [shape=ellipse, fillcolor="#EEF3FB"];
+"RecepcionParcial" [shape=ellipse, fillcolor="#EEF3FB"];
+"Recibida" [shape=doublecircle, fillcolor="#E4F4E8"];
+"Rechazada" [shape=doublecircle, fillcolor="#FBE9E9"];
+__i -> "Borrador";
+"Borrador" -> "EnAprobacion" [label="  s  "];
+"EnAprobacion" -> "Aprobada" [label="  a  "];
+"EnAprobacion" -> "Rechazada" [label="  j  "];
+"Aprobada" -> "Enviada" [label="  e  "];
+"Enviada" -> "Recibida" [label="  k  "];
+"Enviada" -> "RecepcionParcial" [label="  r  "];
+"RecepcionParcial" -> "RecepcionParcial" [label="  r  "];
+"RecepcionParcial" -> "Recibida" [label="  f  "];
+}

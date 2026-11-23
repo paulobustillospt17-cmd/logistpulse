@@ -1,0 +1,9 @@
+# Entradas para Input > Multiple Run en JFLAP (una por línea) y resultado esperado
+saek	Accept	Recepción completa en una entrega
+saerf	Accept	Una recepción parcial y luego completar
+saerrrf	Accept	Varias entregas parciales (lazo r)
+sj	Accept	Orden rechazada en aprobación (cierre válido)
+sje	Reject	Rechazada→Enviada: δ(Rechazada,e) no definida
+se	Reject	Emitir sin aprobar: δ(EnAprobacion,e) no definida
+saekr	Reject	Recibir después de cerrada: δ(Recibida,r) no definida
+saer	Reject	Termina en RecepcionParcial (no final): faltan unidades

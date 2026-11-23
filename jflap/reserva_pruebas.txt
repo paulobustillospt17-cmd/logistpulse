@@ -1,0 +1,9 @@
+# Entradas para Input > Multiple Run en JFLAP (una por línea) y resultado esperado
+vcp	Accept	Solicitada→Validada→Reservada→Consumida
+vcx	Accept	Reserva cancelada: libera stock
+vct	Accept	Reserva vence sin uso
+n	Accept	Rechazo inmediato por falta de stock
+p	Reject	Consumir sin validar ni confirmar: δ(Solicitada,p) no definida
+vp	Reject	Consumir reserva no confirmada: δ(Validada,p) no definida
+vcpx	Reject	Cancelar reserva ya consumida: δ(Consumida,x) no definida
+vc	Reject	Termina en Reservada (no final): reserva abierta

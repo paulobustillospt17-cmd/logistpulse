@@ -1,0 +1,13 @@
+# Planta LOGISTPULSE (Figura 5). Pasillos bidireccionales => grafo NO dirigido. Pesos en metros.
+DIRIGIDO no
+ARISTA R A 4
+ARISTA R B 2
+ARISTA A B 1
+ARISTA A P 3
+ARISTA A E 5
+ARISTA B P 7
+ARISTA B C 3
+ARISTA P E 2
+ARISTA P C 2
+ARISTA C E 4
+ARISTA E D 3

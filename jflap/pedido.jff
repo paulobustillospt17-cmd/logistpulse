@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--Created for JFLAP 7.1. LOGISTPULSE - Pedido-->
+<structure>
+	<type>fa</type>
+	<automaton>
+		<state id="0" name="Borrador">
+			<x>80.0</x>
+			<y>150.0</y>
+			<initial/>
+		</state>
+		<state id="1" name="Confirmado">
+			<x>250.0</x>
+			<y>150.0</y>
+		</state>
+		<state id="2" name="Reservado">
+			<x>420.0</x>
+			<y>150.0</y>
+		</state>
+		<state id="3" name="Preparacion">
+			<x>590.0</x>
+			<y>150.0</y>
+		</state>
+		<state id="4" name="Empacado">
+			<x>760.0</x>
+			<y>150.0</y>
+		</state>
+		<state id="5" name="Despachado">
+			<x>930.0</x>
+			<y>150.0</y>
+		</state>
+		<state id="6" name="Entregado">
+			<x>590.0</x>
+			<y>330.0</y>
+			<final/>
+		</state>
+		<state id="7" name="Cancelado">
+			<x>760.0</x>
+			<y>330.0</y>
+			<final/>
+		</state>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>c</read>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>7</to>
+			<read>x</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>2</to>
+			<read>r</read>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>7</to>
+			<read>x</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>3</to>
+			<read>p</read>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>7</to>
+			<read>x</read>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>4</to>
+			<read>e</read>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>5</to>
+			<read>d</read>
+		</transition>
+		<transition>
+			<from>5</from>
+			<to>6</to>
+			<read>g</read>
+		</transition>
+	</automaton>
+</structure>
