@@ -1,0 +1,7 @@
+# codigo;disponible;en_orden;reservado;minimo;objetivo
+SKU-001;18;10;5;30;50
+SKU-002;80;0;10;30;100
+SKU-003;10;0;0;30;80
+SKU-004;10;50;0;30;80
+SKU-005;5;0;20;10;40
+SKU-006;30;0;0;30;30

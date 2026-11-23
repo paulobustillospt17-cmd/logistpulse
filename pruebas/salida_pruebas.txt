@@ -1,0 +1,81 @@
+=== Autómatas ===
+[OK]    AFD pedido 'crpedg'  -> ACEPTA en Entregado
+[OK]    AFD pedido 'x'  -> ACEPTA en Cancelado
+[OK]    AFD pedido 'crx'  -> ACEPTA en Cancelado
+[OK]    AFD pedido 'd'  -> RECHAZA: δ(Borrador,d) no definida
+[OK]    AFD pedido 'cpedg'  -> RECHAZA: δ(Confirmado,p) no definida
+[OK]    AFD pedido 'crpedgx'  -> RECHAZA: δ(Entregado,x) no definida
+[OK]    AFD pedido 'cxr'  -> RECHAZA: δ(Cancelado,r) no definida
+[OK]    AFD pedido 'crped'  -> RECHAZA: termina en Despachado (no final)
+[OK]    AFD reserva 'vcp'  -> ACEPTA en Consumida
+[OK]    AFD reserva 'vcx'  -> ACEPTA en Liberada
+[OK]    AFD reserva 'vct'  -> ACEPTA en Expirada
+[OK]    AFD reserva 'n'  -> ACEPTA en Rechazada
+[OK]    AFD reserva 'p'  -> RECHAZA: δ(Solicitada,p) no definida
+[OK]    AFD reserva 'vp'  -> RECHAZA: δ(Validada,p) no definida
+[OK]    AFD reserva 'vcpx'  -> RECHAZA: δ(Consumida,x) no definida
+[OK]    AFD reserva 'vc'  -> RECHAZA: termina en Reservada (no final)
+[OK]    AFD compra 'saek'  -> ACEPTA en Recibida
+[OK]    AFD compra 'saerf'  -> ACEPTA en Recibida
+[OK]    AFD compra 'saerrrf'  -> ACEPTA en Recibida
+[OK]    AFD compra 'sj'  -> ACEPTA en Rechazada
+[OK]    AFD compra 'sje'  -> RECHAZA: δ(Rechazada,e) no definida
+[OK]    AFD compra 'se'  -> RECHAZA: δ(EnAprobacion,e) no definida
+[OK]    AFD compra 'saekr'  -> RECHAZA: δ(Recibida,r) no definida
+[OK]    AFD compra 'saer'  -> RECHAZA: termina en RecepcionParcial (no final)
+[OK]    AFD pedido ''  -> RECHAZA: termina en Borrador (no final)
+[OK]    AFD pedido 'cz'  -> RECHAZA: símbolo 'z' fuera de Σ
+
+=== Dijkstra ===
+[OK]    R->D costo 11  -> R -> B -> A -> E -> D costo 11.0
+[OK]    R->D empate: 2 rutas óptimas  -> rutas óptimas = 2
+[OK]    R->D desempate por menos aristas  -> R -> B -> A -> E -> D
+[OK]    R->P costo 6  -> R -> B -> A -> P costo 6.0
+[OK]    Límite: origen = destino  -> D
+[OK]    Bloqueo A: R->D costo 12  -> R -> B -> C -> E -> D costo 12.0, óptimas 2
+[OK]    Límite: E bloqueado aísla D  -> sin ruta (D solo conecta con E)
+[OK]    Dirigido: Z->X sin ruta  -> arcos de un solo sentido
+[OK]    Límite: peso 0 permitido  -> costo 2
+[OK]    Inválido: peso negativo en archivo  -> rechazado: datos/planta_invalida.txt:3: Peso inválido en arista A-B: -1.0 (debe ser finito y >= 0)
+[OK]    Inválido: destino inexistente  -> rechazado: Destino inexistente: Z
+[OK]    Inválido: peso NaN  -> rechazado: Peso inválido en arista A-B: NaN (debe ser finito y >= 0)
+
+=== FEFO ===
+[OK]    FEFO 100 u. completo  -> COMPLETO [L-104:40, L-101:30, L-103:25, L-102:5] pendiente=0
+[OK]    FEFO 30 u. desde un solo lote  -> COMPLETO [L-104:30] pendiente=0
+[OK]    FEFO excluye vencido, vence-hoy y sin stock  -> L-099, L-105, L-106 excluidos
+[OK]    Límite: stock insuficiente PARCIAL  -> PARCIAL [L-104:40, L-101:30, L-103:25, L-102:60] pendiente=45
+[OK]    Límite: stock insuficiente RECHAZAR  -> RECHAZADO [] pendiente=200
+[OK]    Límite: pedido = stock elegible exacto  -> COMPLETO [L-104:40, L-101:30, L-103:25, L-102:60] pendiente=0
+[OK]    Límite: sin lotes  -> PARCIAL [] pendiente=5
+[OK]    Inválido: cantidad 0  -> rechazado: Cantidad pedida debe ser > 0: 0
+[OK]    Inválido: disponible negativo  -> rechazado: Lote L-X con disponible negativo: -3
+[OK]    Inválido: fecha mal formada en archivo  -> rechazado: datos/lotes_invalidos.txt:1: fecha inválida '2026-13-40'
+
+=== Reposición ===
+[OK]    Ejemplo del enunciado: posición 23, sugerencia 27  -> SKU-001 -> 27
+[OK]    Sobre el mínimo: 0  -> SKU-002 posición 70
+[OK]    Sin OC abierta: 70  -> SKU-003 -> 70
+[OK]    OC abierta evita duplicar  -> SKU-004 posición 60 > mínimo
+[OK]    Límite: posición negativa (sobre-reserva)  -> SKU-005 posición -15 -> 55
+[OK]    Límite: posición = mínimo = objetivo  -> SKU-006 -> max(0, 30-30) = 0
+[OK]    Idempotencia: tras crear la OC sugerida ya no sugiere  -> posición 50
+[OK]    Inválido: objetivo < mínimo  -> rechazado: SKU X: se requiere 0 <= minimo <= objetivo
+[OK]    Inválido: reservado negativo  -> rechazado: SKU X: cantidades no pueden ser negativas
+
+=== Carga de flota (NP-completo): verificador, exacto y heurística ===
+[OK]    Certificado válido aceptado  -> carga por camión = 10,10,10
+[OK]    Certificado con sobrecarga rechazado  -> Camión 0 excede capacidad: 11 > 10
+[OK]    Certificado con camión inexistente rechazado  -> Paquete 3 asignado a camión inexistente 3
+[OK]    Certificado incompleto rechazado  -> El certificado debe asignar exactamente un camión por paquete
+[OK]    Exacto encuentra solución y el verificador la acepta  -> [0,1,1,0,2,2,2]
+[OK]    FFD encuentra solución  -> [0,1,1,0,2,2,2]
+[OK]    Exacto: SÍ existe solución  -> [0,1,0,1,1,0]
+[OK]    FFD falla en la misma instancia (heurística sin garantía)  -> FFD no empaca en 2 camiones
+[OK]    Exacto: NO existe con suma > k·C  -> 18 > 10
+[OK]    Límite: paquete más pesado que C  -> 11 > 10
+[OK]    Límite: sin paquetes  -> asignación vacía válida
+[OK]    Inválido: peso 0  -> rechazado: Peso del paquete 0 debe ser > 0
+[OK]    Inválido: 0 camiones  -> rechazado: Número de camiones debe ser > 0
+
+Resumen: 70 pruebas OK, 0 fallas

@@ -1,0 +1,5 @@
+# Carga de flota (Bin Packing): 3 camiones de 10 t, 7 paquetes
+CAPACIDAD 10
+CAMIONES 3
+PESOS 6,5,5,4,4,3,3
+CERTIFICADO 0,1,1,0,2,2,2

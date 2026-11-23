@@ -1,0 +1,32 @@
+$ java -cp out logistpulse.Main ruta datos/planta.txt R D
+Grafo no dirigido: |V|=7, |E|=11
+Ruta: R -> B -> A -> E -> D | costo = 11 m | rutas óptimas = 2
+$ java -cp out logistpulse.Main ruta datos/planta.txt R D A
+Grafo no dirigido: |V|=7, |E|=11
+Ruta: R -> B -> C -> E -> D | costo = 12 m | rutas óptimas = 2
+$ java -cp out logistpulse.Main fefo datos/lotes.txt 100 2026-11-17
+FEFO 100 u. al 2026-11-17 (PARCIAL): COMPLETO [L-104:40, L-101:30, L-103:25, L-102:5] pendiente=0
+$ java -cp out logistpulse.Main fefo datos/lotes.txt 200 2026-11-17 RECHAZAR
+FEFO 200 u. al 2026-11-17 (RECHAZAR): RECHAZADO [] pendiente=200
+$ java -cp out logistpulse.Main reposicion datos/skus.txt
+SKU        posicion  minimo  objetivo  sugerencia
+SKU-001          23      30        50          27
+SKU-002          70      30       100           0
+SKU-003          10      30        80          70
+SKU-004          60      30        80           0
+SKU-005         -15      10        40          55
+SKU-006          30      30        30           0
+$ java -cp out logistpulse.Main carga datos/carga.txt
+Certificado: VÁLIDO
+Exacto (backtracking): SÍ [0,1,1,0,2,2,2]
+Heurística FFD:        SÍ [0,1,1,0,2,2,2]
+$ java -cp out logistpulse.Main carga datos/carga_ffd_falla.txt
+Certificado: VÁLIDO
+Exacto (backtracking): SÍ [0,1,0,1,1,0]
+Heurística FFD:        no encontró asignación
+$ java -cp out logistpulse.Main afd pedido crpedg
+pedido 'crpedg': ACEPTA en Entregado
+$ java -cp out logistpulse.Main afd compra sje
+compra 'sje': RECHAZA: δ(Rechazada,e) no definida
+$ java -cp out logistpulse.Main ruta datos/planta_invalida.txt R D
+ERROR de entrada: datos/planta_invalida.txt:3: Peso inválido en arista A-B: -1.0 (debe ser finito y >= 0)

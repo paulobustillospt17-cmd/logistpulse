@@ -1,0 +1,5 @@
+# Instancia donde la heurística FFD falla aunque sí existe solución ({5,3,2} y {4,3,3})
+CAPACIDAD 10
+CAMIONES 2
+PESOS 5,4,3,3,3,2
+CERTIFICADO 0,1,0,1,1,0
