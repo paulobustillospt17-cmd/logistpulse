@@ -1,0 +1,5 @@
+# Tramos reportados por Transporte (caso p1)
+Durán Quito
+Durán Guayaquil
+Quito Norte
+Guayaquil Sur

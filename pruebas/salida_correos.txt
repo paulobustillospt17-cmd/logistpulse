@@ -1,0 +1,70 @@
+===== correo01_alcanzabilidad.py: OK
+Prueba 1 (datos del caso, CON ruta): SÍ Durán -> Quito -> Norte
+Prueba 2 (tramo Quito->Norte cerrado, SIN ruta): NO
+Prueba 3 (sentido contrario Norte->Durán): NO, las rutas son dirigidas
+Prueba 4 (origen = destino): SÍ, camino de longitud 0
+Prueba 5 (red con ciclos, Guayaquil->Norte): NO, y el BFS termina igual
+Prueba 6 (destino que no existe en la red): NO
+Prueba 7 (certificado falso Durán->Sur->Norte): rechazado por el verificador
+Prueba 8 (entrada mal formada): error detectado -> Línea 2: se esperaba 'Origen Destino', se leyó 'Quito'
+Todas las pruebas pasaron.
+===== correo02_ruta_minima.py: OK
+Caso, dirigido: (inf, None)
+Caso, doble sentido: ['Quito', 'Durán', 'Guayaquil']
+Prueba: CD Quito -> Ambato -> Riobamba -> CD Guayaquil | tiempo: 7
+Pruebas OK
+===== correo03_flujo_maximo.py: OK
+Paso 1: Durán -> Guayaquil -> Sur -> Clientes | +6 | total = 6
+   Durán->Guayaquil: usado 6/8, disponible 2
+   Guayaquil->Sur: usado 6/6, disponible 0
+   Sur->Clientes: usado 6/∞, disponible ∞
+Paso 2: Durán -> Quito -> Norte -> Clientes | +4 | total = 10
+   Durán->Quito: usado 4/10, disponible 6
+   Quito->Norte: usado 4/4, disponible 0
+   Norte->Clientes: usado 4/∞, disponible ∞
+Máximo de camiones/día: 10
+Pruebas OK
+===== correo04_isomorfismo.py: OK
+¿Misma estructura? SÍ
+   Durán -> N1
+   Quito -> N2
+   Guayaquil -> N4
+   Norte -> N3
+   Sur -> N5
+Pruebas OK
+===== correo05_factor_acotado.py: OK
+N = 9991 (14 bits), B = 120 (7 bits)
+¿Tiene divisor en (1, B]? SÍ, d = 97 (N = 97 × 103)
+Verificación independiente del certificado: True
+Pruebas OK
+===== correo06_logaritmo_discreto.py: OK
+p = 101, g = 2, h = 55, B = 50
+¿Existe x en [0, B] con g^x ≡ h (mod p)? SÍ, x = 37
+Verificación: 2^37 mod 101 = 55 -> True
+Pruebas OK
+===== correo07_simetria.py: OK
+¿El plano tiene una simetría no trivial? SÍ
+Certificado (permutación): {'Durán': 'Durán', 'Quito': 'Guayaquil', 'Guayaquil': 'Quito', 'Norte': 'Sur', 'Sur': 'Norte'}
+Verificador independiente: True
+Con sentido de las rutas (dirigido): True
+Grafo asimétrico: NO, tras revisar 8 de 720 permutaciones (el resto descartado por grado)
+Pruebas OK
+===== correo08_sat_turnos.py: OK
+SÍ existe asignación: ['A-franja1', 'B-franja2']
+Comprobación independiente (cumple cada cláusula): True
+Pruebas OK
+===== correo09_tsp_decision.py: OK
+SÍ existe recorrido con costo <= 35 km: Planta Durán -> CD Quito -> CD Guayaquil -> Zona Norte -> Zona Sur -> Planta Durán | 33 km
+Verificación ejecutable: (True, 33)
+(Pregunta distinta) Recorrido mínimo: Planta Durán -> Zona Sur -> Zona Norte -> CD Quito -> CD Guayaquil -> Planta Durán | 32 km
+Pruebas OK
+===== correo10_cobertura_ramificacion.py: OK
+SÍ bastan 2 equipos. Selección (certificado): ['Guayaquil', 'Quito']
+Verificador separado: (True, None)
+Pruebas OK
+===== correo10_cobertura_subconjuntos.py: OK
+SÍ bastan 2 equipos. Selección (certificado): ['Guayaquil', 'Quito']
+Verificador separado: (True, None)
+Pruebas OK
+
+Resumen: 11/11 programas con todas sus pruebas OK
