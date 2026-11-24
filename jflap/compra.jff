@@ -9,29 +9,29 @@
 			<initial/>
 		</state>
 		<state id="1" name="EnAprobacion">
-			<x>250.0</x>
+			<x>260.0</x>
 			<y>150.0</y>
 		</state>
 		<state id="2" name="Aprobada">
-			<x>420.0</x>
+			<x>440.0</x>
 			<y>150.0</y>
 		</state>
 		<state id="3" name="Enviada">
-			<x>590.0</x>
+			<x>620.0</x>
 			<y>150.0</y>
 		</state>
 		<state id="4" name="RecepcionParcial">
-			<x>760.0</x>
-			<y>150.0</y>
+			<x>790.0</x>
+			<y>320.0</y>
 		</state>
 		<state id="5" name="Recibida">
-			<x>930.0</x>
+			<x>960.0</x>
 			<y>150.0</y>
 			<final/>
 		</state>
 		<state id="6" name="Rechazada">
-			<x>590.0</x>
-			<y>330.0</y>
+			<x>260.0</x>
+			<y>340.0</y>
 			<final/>
 		</state>
 		<transition>

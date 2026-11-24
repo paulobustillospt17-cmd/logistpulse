@@ -5,35 +5,35 @@
 	<automaton>
 		<state id="0" name="Solicitada">
 			<x>80.0</x>
-			<y>150.0</y>
+			<y>200.0</y>
 			<initial/>
 		</state>
 		<state id="1" name="Validada">
-			<x>250.0</x>
-			<y>150.0</y>
+			<x>270.0</x>
+			<y>200.0</y>
 		</state>
 		<state id="2" name="Reservada">
-			<x>420.0</x>
-			<y>150.0</y>
+			<x>460.0</x>
+			<y>200.0</y>
 		</state>
 		<state id="3" name="Consumida">
-			<x>590.0</x>
-			<y>150.0</y>
+			<x>680.0</x>
+			<y>70.0</y>
 			<final/>
 		</state>
 		<state id="4" name="Liberada">
-			<x>760.0</x>
-			<y>150.0</y>
+			<x>680.0</x>
+			<y>200.0</y>
 			<final/>
 		</state>
 		<state id="5" name="Expirada">
-			<x>930.0</x>
-			<y>150.0</y>
+			<x>680.0</x>
+			<y>330.0</y>
 			<final/>
 		</state>
 		<state id="6" name="Rechazada">
-			<x>590.0</x>
-			<y>330.0</y>
+			<x>270.0</x>
+			<y>370.0</y>
 			<final/>
 		</state>
 		<transition>

@@ -12,7 +12,7 @@ Versión editable en línea: https://claude.ai/artifact/EeC8T2xHnFDmCQBS8BqMwW
 
 ## Diapositiva 3 · automatas
 
-(75 s) Modelamos los tres procesos como AFD con la quíntupla Q, Sigma, delta, q cero, F. Cada evento es una letra, para que JFLAP lo trate como símbolo. La función de transición es parcial: lo que no está definido va a un sumidero y se rechaza, que es justo como funciona JFLAP. Los estados finales son los cierres legítimos del proceso, exitosos o no. En la tabla, una secuencia válida y una inválida por proceso: no se puede cancelar un pedido entregado, consumir una reserva sin confirmar, ni enviar una orden rechazada. Agregamos un lazo de recepciones parciales en la compra. Las 26 secuencias dieron lo esperado en el simulador Java, y un validador que lee directamente los archivos .jff confirma las 24 cadenas de prueba. [Mostrar aquí la captura de JFLAP Multiple Run.]
+(75 s) Modelamos los tres procesos como AFD con la quíntupla Q, Sigma, delta, q cero, F. Cada evento es una letra, para que JFLAP lo trate como símbolo. La función de transición es parcial: lo que no está definido va a un sumidero y se rechaza, que es justo como funciona JFLAP. Los estados finales son los cierres legítimos del proceso, exitosos o no. En la tabla, una secuencia válida y una inválida por proceso: no se puede cancelar un pedido entregado, consumir una reserva sin confirmar, ni enviar una orden rechazada. Agregamos un lazo de recepciones parciales en la compra. Las 26 secuencias dieron lo esperado en el simulador Java, y en JFLAP, con Multiple Run, las 24 cadenas de prueba dieron Accept o Reject según lo esperado; las capturas están en el informe.
 
 ## Diapositiva 4 · grafo
 
