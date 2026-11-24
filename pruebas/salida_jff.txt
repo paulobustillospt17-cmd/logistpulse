@@ -1,0 +1,29 @@
+== pedido.jff: 8 estados, 9 transiciones, inicial Borrador, finales ['Cancelado', 'Entregado']
+  crpedg   esperado Accept obtenido Accept OK  (termina en Entregado)
+  x        esperado Accept obtenido Accept OK  (termina en Cancelado)
+  crx      esperado Accept obtenido Accept OK  (termina en Cancelado)
+  d        esperado Reject obtenido Reject OK  (sin transición desde Borrador con 'd')
+  cpedg    esperado Reject obtenido Reject OK  (sin transición desde Confirmado con 'p')
+  crpedgx  esperado Reject obtenido Reject OK  (sin transición desde Entregado con 'x')
+  cxr      esperado Reject obtenido Reject OK  (sin transición desde Cancelado con 'r')
+  crped    esperado Reject obtenido Reject OK  (termina en Despachado (no final))
+== reserva.jff: 7 estados, 6 transiciones, inicial Solicitada, finales ['Consumida', 'Expirada', 'Liberada', 'Rechazada']
+  vcp      esperado Accept obtenido Accept OK  (termina en Consumida)
+  vcx      esperado Accept obtenido Accept OK  (termina en Liberada)
+  vct      esperado Accept obtenido Accept OK  (termina en Expirada)
+  n        esperado Accept obtenido Accept OK  (termina en Rechazada)
+  p        esperado Reject obtenido Reject OK  (sin transición desde Solicitada con 'p')
+  vp       esperado Reject obtenido Reject OK  (sin transición desde Validada con 'p')
+  vcpx     esperado Reject obtenido Reject OK  (sin transición desde Consumida con 'x')
+  vc       esperado Reject obtenido Reject OK  (termina en Reservada (no final))
+== compra.jff: 7 estados, 8 transiciones, inicial Borrador, finales ['Rechazada', 'Recibida']
+  saek     esperado Accept obtenido Accept OK  (termina en Recibida)
+  saerf    esperado Accept obtenido Accept OK  (termina en Recibida)
+  saerrrf  esperado Accept obtenido Accept OK  (termina en Recibida)
+  sj       esperado Accept obtenido Accept OK  (termina en Rechazada)
+  sje      esperado Reject obtenido Reject OK  (sin transición desde Rechazada con 'e')
+  se       esperado Reject obtenido Reject OK  (sin transición desde EnAprobacion con 'e')
+  saekr    esperado Reject obtenido Reject OK  (sin transición desde Recibida con 'r')
+  saer     esperado Reject obtenido Reject OK  (termina en RecepcionParcial (no final))
+
+Resumen: 24/24 cadenas coinciden con lo esperado leyendo los .jff

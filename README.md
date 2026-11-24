@@ -18,7 +18,7 @@ src/logistpulse/
 datos/        entradas de prueba (válidas e inválidas)
 pruebas/      salidas observadas (salida_pruebas.txt, salida_cli.txt, salida_correos.txt)
 correos/      10 programas Python (uno por correo del simulador) + ejecutar_todos.py
-docs/         informe (PDF y Word)
+docs/         informe (PDF y Word), presentación (PPTX con notas y PDF), guion y PENDIENTES.md
 ```
 
 Sin dependencias externas y sin colecciones de `java.util`: todas las estructuras (lista de adyacencia, montículo, merge sort) son propias.
@@ -64,7 +64,16 @@ Cada script tiene una sección «Entrada»: reemplácela con los datos del exped
 
 ## JFLAP
 
+Validar los archivos sin abrir JFLAP: `python jflap/validar_jff.py` (lee el XML de cada .jff y corre las cadenas; 24/24).
+
 Abrir `jflap/pedido.jff` → *Input → Multiple Run* → pegar las cadenas de `jflap/pedido_pruebas.txt`. La segunda columna del archivo trae el resultado esperado (Accept/Reject). Leyenda de símbolos: ver la sección 2 del informe.
+
+## Presentación
+
+- `docs/Presentacion_LOGISTPULSE.pptx`: 10 diapositivas con notas del orador (≈ 9 min 50 s).
+- `docs/Presentacion_LOGISTPULSE.pdf`: la misma, para proyectar sin PowerPoint.
+- `docs/Guion_presentacion.md`: el guion por diapositiva.
+- Versión editable en línea: https://claude.ai/artifact/EeC8T2xHnFDmCQBS8BqMwW
 
 ## Contribuciones
 
