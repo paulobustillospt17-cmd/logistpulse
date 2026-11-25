@@ -36,7 +36,7 @@ Versión editable en línea: https://claude.ai/artifact/EeC8T2xHnFDmCQBS8BqMwW
 
 ## Diapositiva 9 · implementacion
 
-(60 s) Implementamos en Java el núcleo: Dijkstra con bloqueos, FEFO, reposición, los tres autómatas y un verificador de certificados para carga de flota. Todo con estructuras propias, sin colecciones de java.util, y separado en lectura, procesamiento y presentación. Las 70 pruebas cubren casos normales, límite e inválidos, y pasan todas. Cada correo tiene además un programa en Python con su verificador. El repositorio tiene una etiqueta por sprint y el release v1.0. Mateo formalizó los autómatas, Paulo diseñó los algoritmos, Juan David implementó y probó el código, y Edison coordinó el backlog y el informe.
+(60 s) Implementamos en Java el núcleo: Dijkstra con bloqueos, FEFO, reposición, los tres autómatas y un verificador de certificados para carga de flota. Todo con estructuras propias, sin colecciones de java.util, y separado en lectura, procesamiento y presentación. Las 70 pruebas cubren casos normales, límite e inválidos, y pasan todas. Cada correo tiene además un programa en Python con su verificador. El repositorio tiene una etiqueta por sprint y el release v1.0. Mateo formalizó los autómatas, Paulo diseñó los algoritmos, Juan David Aguilar implementó y probó el código, y Edison coordinó el backlog y el informe.
 
 ## Diapositiva 10 · cierre
 

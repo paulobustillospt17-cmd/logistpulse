@@ -82,7 +82,7 @@ Abrir `jflap/pedido.jff` → *Input → Multiple Run* → pegar las cadenas de `
 | Edison Matias Luje Redroban | 336006 | Coordinación y backlog | H10 seguimiento de las diez fichas, H13 informe y presentación; coordinó backlog y revisiones; presenta diapositivas 1, 2, 9 y 10 |
 | Mateo Rios | 338012 | Formalización | H1–H3 autómatas y archivos JFLAP con capturas, H4 grafo de la planta, H12 nota de decidibilidad; presenta diapositivas 3 y 8 |
 | Paulo Bustillos | 331539 | Algoritmos y análisis | H5 Dijkstra, H6 FEFO, H7 reposición, H8 pseudocódigo, terminación y Big-O; presenta diapositivas 4 y 5 |
-| Juan David | 331644 | Implementación y validación | H9 código Java y 70 pruebas, H11 verificador de certificados, programas de los diez correos; presenta diapositivas 6 y 7 |
+| Juan David Aguilar | 331644 | Implementación y validación | H9 código Java y 70 pruebas, H11 verificador de certificados, programas de los diez correos; presenta diapositivas 6 y 7 |
 
 Etiquetas: `v0.1-sprint1` (autómatas y grafo), `v0.2-sprint2` (algoritmos y pruebas), `v1.0` (release final).
 Repositorio: https://github.com/paulobustillospt17-cmd/logistpulse
