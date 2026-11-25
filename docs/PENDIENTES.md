@@ -1,7 +1,7 @@
 # Lo que falta antes de entregar (solo lo puede hacer el equipo)
 
 1. ~~Capturas de JFLAP~~ **Hecho:** `diagramas/jflap_*.png`, en el informe (sección 2.4) y 24/24 en JFLAP.
-2. **Datos del equipo** en el informe (portada, sección 8), el README y la diapositiva 1: nombres, roles,
+2. **Datos del equipo:** nombres listos. Faltan el código de Juan David, el profesor, la fecha y el enlace del repositorio (portada del informe y README).
    profesor, fecha y enlace al repositorio. Buscar «[Integrante», «[completar]» y «[COMPLETAR».
 3. ~~Retrospectivas~~ **Borrador hecho** en la sección 8 del informe, basado en lo que pasó; revisarlo con el equipo.
 4. **Datos reales de los correos**, si el simulador los muestra: 3 (capacidades), 4 (segunda red), 5 (N y B),
