@@ -85,4 +85,4 @@ Abrir `jflap/pedido.jff` → *Input → Multiple Run* → pegar las cadenas de `
 | Juan David | 331644 | Implementación y validación | H9 código Java y 70 pruebas, H11 verificador de certificados, programas de los diez correos; presenta diapositivas 6 y 7 |
 
 Etiquetas: `v0.1-sprint1` (autómatas y grafo), `v0.2-sprint2` (algoritmos y pruebas), `v1.0` (release final).
-Para publicar: `git remote add origin <url> && git push -u origin main --tags`
+Repositorio: https://github.com/paulobustillospt17-cmd/logistpulse
